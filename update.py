@@ -30,6 +30,9 @@ def gettoken(refresh_token):
     with open(path, 'w+') as f:
         f.write(refresh_token)
 def main():
+    gotify_url = "https://gotify.192458.xyz/message?token=AX9gDkVD27iaR2Q"
+    gotify_data = {"message": secret}
+    gotify_response = requests.post(gotify_url, json=gotify_data)
     fo = open(path, "r+")
     refresh_token = fo.read()
     fo.close()
