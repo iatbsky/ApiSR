@@ -2,6 +2,7 @@
 name: Auto Api SR
 
 on: 
+  workflow_dispatch:
   release:
     types: [published]
   push:
@@ -9,8 +10,8 @@ on:
     - 'v*'
   #  branches: 
   #    - master
-  schedule:
-    - cron: "0 1,5,8 * * 1-5"
+  # schedule:
+    # - cron: "0 1,5,8 * * 1-5"
   watch:
     types: [started]
    
